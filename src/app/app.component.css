@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 48px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.convert-btn {
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: aquamarine;
+  color: darkblue;
+  border: none;
+}
