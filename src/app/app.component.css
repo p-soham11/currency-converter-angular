@@ -6,6 +6,13 @@
   align-items: center;
 }
 
+select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-right: 15px;
+}
+
 .title {
   font-size: 48px;
 }
@@ -17,10 +24,17 @@ input {
 }
 
 .convert-btn {
-  padding: 18px;
+  padding: 15px;
   border-radius: 10px;
   font-size: 1rem;
   background-color: aquamarine;
-  color: darkblue;
+  color: rgb(28, 6, 68);
   border: none;
+  margin-top: 10px;
+}
+
+.final-amt {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(26, 244, 149);
 }

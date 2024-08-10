@@ -1,11 +1,38 @@
-<div class="container">
-  <h2 class="title">Currency Converter</h2>
-  <div class="upper">
-    <input type="number" name="primary" [value]="primary" />
+<div style="text-align: center" class="container">
+  <h1>Currency Converter</h1>
+
+  <div class="choice">
+    <label for="fromCurrency">From: </label>
+    <select id="fromCurrency" [(ngModel)]="primary">
+      <option *ngFor="let currency of currencies" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+
+    <label for="toCurrency">To: </label>
+    <select id="toCurrency" [(ngModel)]="secondary">
+      <option *ngFor="let currency of currencies" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <label for="amount">Amount: </label>
+    <input
+      id="amount"
+      type="number"
+      [(ngModel)]="amount"
+      (ngModelChange)="convertCurrency()"
+    />
+    <br />
+    <button (click)="convertCurrency()" class="convert-btn">Convert</button>
   </div>
 
-  <div class="lower">
-    <input type="number" name="secondary" />
+  <div *ngIf="convertedAmount !== null">
+    <p>
+      {{ amount }} {{ primary }} is approximately
+      <span class="final-amt">{{ convertedAmount.toFixed(2) }}</span>
+      {{ secondary }}
+    </p>
   </div>
-  <Button class="convert-btn">Convert</Button>
 </div>
